@@ -38,8 +38,10 @@ while not game_end:
         else:
             next_position = dice1 + 6
 
+        # if next position (e.g. 6) is greater than the current position (e.g. 5), add the difference to current position index (e.g. 10) (e.g. 10 + (6-5))
         if next_position > current_position:
             players_position_index[i] = players_position_index[i] + (next_position - current_position)
+        # if next position (e.g. 4) is greater than the current position (e.g. 5), add the difference + 6 to current position index (e.g. 10) (e.g. 10+(5-4+6))
         else:
             players_position_index[i] = players_position_index[i] + ((6 - current_position) + next_position)
         
